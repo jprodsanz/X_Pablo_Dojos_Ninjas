@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="text-center container pt-5" style="max-width:420px;margin:auto;">
+    <legend class="text-center border-bottom pb-2 mb-4 h1">All Dojos</legend>
+    {% for d in all_dojos %}
+    <p> 
+        <a href="/dojo/{{d.id}}" class="">{{d.name}}</a>
+    </p>
+    {% endfor %}
+</div>
+    <!-- </div>
+        <a href="/ninja" class="text-center mx-auto">Add Ninja</a>
+    </div> -->
+    <div class="form-outline d-grid gap-2 col-2 mx-auto">
+        <a class="nav-item nav-link btn btn-primary btn-block mb-4" href="{{ url_for('ninjas') }}">Add Ninja</a>
+    </div>
+{% endblock content %}
