@@ -20,16 +20,12 @@
                     <td>{{ ninja.first_name }}</td>
                     <td>{{ ninja.last_name }}</td>
                     <td>{{ ninja.age }}</td>
-                    <!-- <td>{{ ninja.created_at }}</td> -->
-                    <!-- <td>
-                        <a href="/user/print/{{ user.id }} ">Show</a>
-                        <a href="/user/edit/{{ user.id }} ">Edit</a>
-                        <a href="/user/delete/{{ user.id }} ">Delete </a>
-                    </td> -->
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    <a href="/" class="btn btn-outline-info">Home</a>
+    <div class="form-outline d-grid gap-2 col-6">
+        <a class="nav-item nav-link btn btn-outline-info mb-4" href="{{ url_for('dojo') }}">Dojos</a>
+    </div>
 </div>
 {% endblock content %}

@@ -22,14 +22,14 @@
             </div>  
                                                 <!-- Age Input -->
             <div class="form-outline mb-3">
-                <input type="number" name="age" class="form-control" placeholder="Age"  />
+                <input type="number" min="0" name="age" class="form-control" placeholder="Age"  />
                 <label class="form-label visually-hidden" for="age"></label>
             </div>
             <div class="form-outline mb-3">
                 <label class="form-label visually-hidden" for="dojo_id">Dojo:</label>
                     <select name="dojo_id" class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
                         {% for d in dojos %}
-                            <option selected>Open this select menu</option>
                             <option value="{{d.id}}">{{d.name}}</option>
                         {%  endfor %}
                     </select>
