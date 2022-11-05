@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="card text-center text-center">
+            <div class="card-header">Ninja Info </div>
+                <div class="card-body">
+                    <h5 class="card-title">I am {{ninja.id}}</h5>
+                    <p class="card-text">{{ninja.first_name}} {{ninja.last_name}}</p>
+                    <p class="card-text">{{ninja.email}}</p>
+                </div>
+    
+    </div>
+{% endblock content %}

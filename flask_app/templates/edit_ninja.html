@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container pt-5" style="max-width:420px;margin:auto;">
+    <form method="post" action="/ninja/update">
+        <fieldset class="form-outline">
+                <legend class="text-center border-bottom pb-2 mb-4 h1">Edit Ninja</legend>
+                                        <!-- First Name input -->
+                <input type="hidden" name="id" value={{ninja.id}}>
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name"  class="form-control" value="{{ninja.first_name}}">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name"  class="form-control" value="{{ninja.last_name}}">
+                </div>
+                <div class="form-outline mb-3">
+                    <label for="age" class="form-label visually-hidden">Age</label>
+                    <input type="number" min="0" name="age" class="form-control" placeholder="Age" value="{{ninja.age}}"  />
+                </div>
+        </fieldset>
+                                                    <!-- Submit button -->
+        <div class="form-outline d-grid gap-2 col-6 mx-auto">
+        <button type="submit" class="btn btn-primary btn-block mb-4">Update Ninja</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
