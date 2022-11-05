@@ -3,10 +3,12 @@
     <div class="card text-center text-center">
             <div class="card-header">Ninja Info </div>
                 <div class="card-body">
-                    <h5 class="card-title">I am {{ninja.id}}</h5>
+                    <h5 class="card-title">Ninja ID {{ninja.id}}</h5>
                     <p class="card-text">{{ninja.first_name}} {{ninja.last_name}}</p>
-                    <p class="card-text">{{ninja.email}}</p>
+                    <p class="card-text"> I am {{ninja.age}} years old</p>
                 </div>
-    
+                <div class="form-outline d-grid gap-2 col-6 mx-auto">
+                    <a class="nav-item nav-link btn btn-outline-info mb-4" href="{{ url_for('dojo') }}">Dojos</a>
+                </div>
     </div>
 {% endblock content %}

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container pt-5" style="max-width:420px;margin:auto;">
+<div class="container pt-5" style="max-width:460px;margin:auto;">
     <form method="post" action="/create/dojo">
         <fieldset class="form-outline">
                 <legend class="text-center border-bottom pb-2 mb-4 h1">Dojos and Ninjas</legend>
@@ -14,11 +14,11 @@
         </fieldset>
                                                         <!-- Submit button -->
             <div class="form-outline d-grid gap-1 col-5 mx-auto">
-                <button type="submit" class="btn btn-primary btn-block mb-4">Add Dojo</button>
+                <button type="submit" class="btn btn-primary btn-block mb-2">Add Dojo</button>
             </div>
     </form>
     <div class="form-outline d-grid gap-1 col-5 mx-auto">
-        <a class="nav-item nav-link btn btn-success btn-block mb-4" href="{{ url_for('dojo') }}">View Dojos</a>
+        <a class="btn btn-success btn btn-block mb-2" href="{{ url_for('dojo') }}">View Dojos</a>
     </div>
 </div>
 {% endblock content %}
